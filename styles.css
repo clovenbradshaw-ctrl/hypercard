@@ -77,3 +77,285 @@ nav.page-nav a { display: inline-block; margin-right: 12px; }
 .badge { display:inline-block; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); font-size: 12px; color: var(--muted); }
 .note { background: #fff8e1; border: 1px solid #f2d98d; padding: 8px; border-radius: 6px; }
 kbd { font-family: var(--mono); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; background: #fff; }
+
+/* -------------------------------------------------------------------------- */
+/* HyperCard Home ----------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+body.home-screen {
+  background: #bdbdbd;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px;
+  font-family: "ChicagoFLF", "Charcoal", "Geneva", "Helvetica", sans-serif;
+}
+
+body.home-screen * {
+  box-sizing: border-box;
+}
+
+.home-window {
+  background: #fff;
+  border: 3px solid #000;
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    inset 0 0 0 2px #000,
+    8px 8px 0 #8a8a8a,
+    8px 8px 0 3px #404040;
+  padding: 28px 36px 24px;
+  width: min(760px, 100%);
+}
+
+.home-window__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+}
+
+.home-window__header h1 {
+  font-size: 32px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.home-window__status {
+  margin: 8px 0 0;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.home-window__status strong {
+  font-weight: 700;
+}
+
+.home-window__home {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  text-align: right;
+}
+
+.home-window__intro {
+  font-size: 16px;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.home-window__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px 18px;
+}
+
+.home-item {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-item:focus,
+.home-item:hover {
+  outline: none;
+  text-decoration: underline;
+}
+
+.home-item:focus-visible {
+  outline: 2px dashed #000;
+  outline-offset: 6px;
+}
+
+.home-icon {
+  width: 76px;
+  height: 76px;
+  border: 2px solid #000;
+  background: #fff;
+  position: relative;
+  box-shadow: 4px 4px 0 #9c9c9c;
+}
+
+.home-icon::before,
+.home-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-icon--tour::before {
+  width: 38px;
+  height: 38px;
+  border: 2px solid #000;
+  background: repeating-linear-gradient(135deg, #fff 0 6px, #000 6px 8px);
+}
+
+.home-icon--help::after {
+  content: "?";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.home-icon--practice::before {
+  width: 48px;
+  height: 2px;
+  background: #000;
+  box-shadow: 0 -12px 0 #000, 0 12px 0 #000;
+}
+
+.home-icon--features::before {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.home-icon--art::before {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.home-icon--addresses::before {
+  width: 52px;
+  height: 32px;
+  border: 2px solid #000;
+  background: linear-gradient(to bottom, #fff 0 16px, #000 16px 18px, #fff 18px 100%);
+}
+
+.home-icon--dialer::before {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-shadow: -18px -18px 0 -2px #000, 0 -18px 0 -2px #000, 18px -18px 0 -2px #000,
+    -18px 0 0 -2px #000, 18px 0 0 -2px #000,
+    -18px 18px 0 -2px #000, 0 18px 0 -2px #000, 18px 18px 0 -2px #000;
+}
+
+.home-icon--graph::before {
+  width: 8px;
+  height: 36px;
+  background: #000;
+  box-shadow: -14px 8px 0 0 #000, 14px -10px 0 0 #000, 28px 4px 0 0 #000;
+}
+
+.home-icon--qt::after {
+  content: "Q";
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.home-icon--mail::before {
+  width: 52px;
+  height: 32px;
+  border: 2px solid #000;
+  background:
+    linear-gradient(135deg, transparent 0 48%, #000 48% 52%, transparent 52% 100%),
+    linear-gradient(225deg, transparent 0 48%, #000 48% 52%, transparent 52% 100%);
+}
+
+.home-icon--text::before {
+  width: 46px;
+  height: 2px;
+  background: #000;
+  box-shadow: 0 -14px 0 #000, 0 14px 0 #000, 0 28px 0 #000;
+}
+
+.home-icon--extras::before {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #000;
+  box-shadow: 6px 6px 0 0 #000;
+}
+
+.home-tabs {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 2px solid #000;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home-tab {
+  border: 2px solid #000;
+  background: #dedede;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #7c7c7c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-tab:hover,
+.home-tab:focus {
+  background: #f6f6f6;
+}
+
+.home-tab:focus-visible {
+  outline: 2px dashed #000;
+  outline-offset: 4px;
+}
+
+.home-tab--active {
+  background: #fff;
+  box-shadow: inset 2px 2px 0 #000;
+}
+
+@media (max-width: 720px) {
+  body.home-screen {
+    padding: 20px;
+  }
+
+  .home-window {
+    padding: 24px;
+  }
+
+  .home-window__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .home-window {
+    padding: 20px;
+  }
+
+  .home-window__header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .home-window__home {
+    text-align: left;
+  }
+
+  .home-window__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
