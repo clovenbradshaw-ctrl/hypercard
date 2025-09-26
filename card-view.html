@@ -37,15 +37,15 @@
 <section class="hc-content">
 
 <div class="hc-card" role="region" aria-label="Card Canvas">
-  <div class="hc-row" style="justify-content:space-between">
-    <button class="hc-button" data-nav="prev">Prev</button>
-    <div class="badge">Card 1 of 3 · Background: Main</div>
-    <button class="hc-button" data-nav="next">Next</button>
+    <div class="hc-row" style="justify-content:space-between">
+      <button class="hc-button" data-nav="prev">Prev</button>
+      <div class="badge" data-role="card-badge">Card 1 of 3 · Background: Main</div>
+      <button class="hc-button" data-nav="next">Next</button>
   </div>
   <div class="hc-row" style="margin-top:12px">
     <div class="hc-col" style="flex:2">
       <label class="hc-label" for="title-field">Field “Title”</label>
-      <div id="title-field" class="hc-field" contenteditable="true" role="textbox" aria-multiline="true">Welcome to HyperCard</div>
+      <div id="title-field" class="hc-field" contenteditable="true" role="textbox" aria-multiline="true" data-field="Title" tabindex="0">Welcome to HyperCard</div>
     </div>
     <div class="hc-col" style="flex:1">
       <label class="hc-label">Buttons</label>
@@ -58,16 +58,13 @@
   </div>
   <div class="hc-col" style="margin-top:12px">
     <label class="hc-label" for="body-field">Field “Body”</label>
-    <div id="body-field" class="hc-field" contenteditable="true" role="textbox" aria-multiline="true" style="min-height:220px">This is editable card text.</div>
+    <div id="body-field" class="hc-field" contenteditable="true" role="textbox" aria-multiline="true" style="min-height:220px" data-field="Body" tabindex="0">This is editable card text.</div>
   </div>
 </div>
 
 <section class="panel" style="margin-top:16px">
   <h3>Event stream (example)</h3>
-  <div class="kv">
-    <div>mouseDown</div><div><small class="meta">sent to topmost part under pointer</small></div>
-    <div>mouseUp</div><div><small class="meta">if pointer still within same part</small></div>
-    <div>openCard / closeCard</div><div><small class="meta">on card navigation</small></div>
+  <div class="kv" data-role="event-stream">
   </div>
 </section>
 

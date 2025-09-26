@@ -57,6 +57,10 @@ body {
 .mb-form { display: grid; grid-template-columns: 72px 1fr; gap: 12px; align-items: center; }
 #mb-input { padding: 10px; border-radius: 6px; border: 1px solid var(--border); font-family: var(--mono); }
 #mb-output { display: block; grid-column: 1 / -1; padding: 6px 0; color: var(--muted); font-family: var(--mono); }
+[data-role="message-watcher"],
+[data-role="variable-watcher"] { font-family: var(--mono); white-space: pre-wrap; }
+[data-role="event-stream"] { min-height: 72px; }
+[data-role="event-stream"] > div { padding: 2px 0; }
 /* Inspector tables */
 .prop-table { width: 100%; border-collapse: collapse; }
 .prop-table th, .prop-table td { border: 1px solid var(--border); padding: 8px; font-size: 14px; }

@@ -45,20 +45,16 @@
       <button class="hc-button">Set Breakpoint</button>
       <button class="hc-button">Save</button>
     </div>
-    <textarea aria-label="Script" class="hc-field" style="min-height:280px; font-family: var(--mono); white-space: pre; overflow:auto;">on mouseUp
+    <textarea aria-label="Script" class="hc-field" data-role="script-source" style="min-height:280px; font-family: var(--mono); white-space: pre; overflow:auto;">on mouseUp
   answer &quot;You clicked&quot;
 end mouseUp</textarea>
     <small class="meta">Use global properties like <code class="k">scriptTextFont</code> and <code class="k">scriptTextSize</code> to affect the editor’s appearance via your runtime.</small>
   </section>
   <section class="panel">
     <h3>Message Watcher</h3>
-    <div class="hc-field" style="min-height:120px; font-family: var(--mono); overflow:auto;">openCard
-mouseEnter button &quot;Home&quot;
-mouseDown
-mouseUp</div>
+    <div class="hc-field" data-role="message-watcher" style="min-height:120px; font-family: var(--mono); overflow:auto; white-space:pre-wrap;">openCard</div>
     <h3 style="margin-top:12px">Variable Watcher</h3>
-    <div class="hc-field" style="min-height:120px; font-family: var(--mono); overflow:auto;">userLevel = 5
-it = &quot;OK&quot;</div>
+    <div class="hc-field" data-role="variable-watcher" style="min-height:120px; font-family: var(--mono); overflow:auto; white-space:pre-wrap;">userLevel = 5</div>
   </section>
 </div>
 
