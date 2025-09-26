@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HyperCard UI Kit</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+<header class="hc-menubar" role="banner">
+  <nav aria-label="HyperCard Menu Bar">
+    <ul class="menu">
+      <li><a href="index.html" aria-current="page">HyperCard UI Kit</a></li>
+      <li class="right"><a href="#" data-action="toggle-message-box">Message Box</a></li>
+      <li class="right"><a href="#" data-action="toggle-tools">Tools</a></li>
+    </ul>
+  </nav>
+</header>
+<aside class="hc-tools" aria-label="Tools Palette">
+  <ul>
+    <li><button class="tool selected" data-tool="browse" title="Browse">Browse</button></li>
+    <li><button class="tool" data-tool="button" title="Button">Button</button></li>
+    <li><button class="tool" data-tool="field" title="Field">Field</button></li>
+    <li><button class="tool" data-tool="paint" title="Paint">Paint</button></li>
+    <li><button class="tool" data-tool="hand" title="Hand">Hand</button></li>
+  </ul>
+</aside>
+<main class="hc-main" role="main">
+<div class="hc-window">
+<div class="hc-titlebar">
+  <span class="title">HyperCard UI Kit</span>
+  <div class="window-controls" aria-hidden="true">
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+</div>
+<section class="hc-content">
+
+<h1>HyperCard UI Kit (Static Scaffolds)</h1>
+<p>This kit provides static, accessible HTML scaffolds for core HyperCard UX surfaces (card window, script editor, message box, debugger, inspectors, dialogs, and more). Wire in your runtime to make them live.</p>
+<nav class="page-nav">
+  <a href="card-view.html">Card View</a>
+  <a href="background-editor.html">Background Editor</a>
+  <a href="script-editor.html">Script Editor</a>
+  <a href="message-box.html">Message Box</a>
+  <a href="debugger.html">Debugger</a>
+  <a href="inspectors.html">Inspectors</a>
+  <a href="find-mark.html">Find & Mark</a>
+  <a href="dialogs.html">Ask / Answer</a>
+  <a href="printing.html">Printing & Reports</a>
+  <a href="preferences.html">Preferences</a>
+  <a href="apple-events.html">Apple Events</a>
+  <a href="window-management.html">Window Management</a>
+  <a href="sound-paint.html">Sound & Paint</a>
+</nav>
+<section class="panel" style="margin-top:16px">
+  <h3>Notes</h3>
+  <ul>
+    <li>All pages share the same menu bar, tool palette, and message box.</li>
+    <li>Use <code class="k">data-</code> attributes and IDs to bind your JavaScript runtime.</li>
+    <li>Typography is system fonts only; add your own theme as needed.</li>
+  </ul>
+</section>
+
+</section>
+</div>
+</main>
+
+<footer class="hc-message-box" aria-label="Message Box" hidden>
+  <form class="mb-form" onsubmit="return false">
+    <label for="mb-input">Message:</label>
+    <input id="mb-input" name="message" type="text" placeholder="type HyperTalk here and press ⏎">
+    <output id="mb-output" for="mb-input" aria-live="polite"></output>
+  </form>
+</footer>
+</body>
+</html>

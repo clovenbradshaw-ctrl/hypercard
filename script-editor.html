@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Script Editor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+<header class="hc-menubar" role="banner">
+  <nav aria-label="HyperCard Menu Bar">
+    <ul class="menu">
+      <li><a href="index.html" aria-current="page">HyperCard UI Kit</a></li>
+      <li class="right"><a href="#" data-action="toggle-message-box">Message Box</a></li>
+      <li class="right"><a href="#" data-action="toggle-tools">Tools</a></li>
+    </ul>
+  </nav>
+</header>
+<aside class="hc-tools" aria-label="Tools Palette">
+  <ul>
+    <li><button class="tool selected" data-tool="browse" title="Browse">Browse</button></li>
+    <li><button class="tool" data-tool="button" title="Button">Button</button></li>
+    <li><button class="tool" data-tool="field" title="Field">Field</button></li>
+    <li><button class="tool" data-tool="paint" title="Paint">Paint</button></li>
+    <li><button class="tool" data-tool="hand" title="Hand">Hand</button></li>
+  </ul>
+</aside>
+<main class="hc-main" role="main">
+<div class="hc-window">
+<div class="hc-titlebar">
+  <span class="title">Script Editor</span>
+  <div class="window-controls" aria-hidden="true">
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+</div>
+<section class="hc-content">
+
+<div class="hc-grid">
+  <section class="panel">
+    <h3>Script Editor</h3>
+    <div class="hc-row" style="gap:8px">
+      <button class="hc-button">Run</button>
+      <button class="hc-button">Check Syntax</button>
+      <button class="hc-button">Set Breakpoint</button>
+      <button class="hc-button">Save</button>
+    </div>
+    <textarea aria-label="Script" class="hc-field" style="min-height:280px; font-family: var(--mono); white-space: pre; overflow:auto;">on mouseUp
+  answer &quot;You clicked&quot;
+end mouseUp</textarea>
+    <small class="meta">Use global properties like <code class="k">scriptTextFont</code> and <code class="k">scriptTextSize</code> to affect the editor’s appearance via your runtime.</small>
+  </section>
+  <section class="panel">
+    <h3>Message Watcher</h3>
+    <div class="hc-field" style="min-height:120px; font-family: var(--mono); overflow:auto;">openCard
+mouseEnter button &quot;Home&quot;
+mouseDown
+mouseUp</div>
+    <h3 style="margin-top:12px">Variable Watcher</h3>
+    <div class="hc-field" style="min-height:120px; font-family: var(--mono); overflow:auto;">userLevel = 5
+it = &quot;OK&quot;</div>
+  </section>
+</div>
+
+</section>
+</div>
+</main>
+
+<footer class="hc-message-box" aria-label="Message Box" hidden>
+  <form class="mb-form" onsubmit="return false">
+    <label for="mb-input">Message:</label>
+    <input id="mb-input" name="message" type="text" placeholder="type HyperTalk here and press ⏎">
+    <output id="mb-output" for="mb-input" aria-live="polite"></output>
+  </form>
+</footer>
+</body>
+</html>

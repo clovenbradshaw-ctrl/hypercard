@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Printing & Reports</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+<header class="hc-menubar" role="banner">
+  <nav aria-label="HyperCard Menu Bar">
+    <ul class="menu">
+      <li><a href="index.html" aria-current="page">HyperCard UI Kit</a></li>
+      <li class="right"><a href="#" data-action="toggle-message-box">Message Box</a></li>
+      <li class="right"><a href="#" data-action="toggle-tools">Tools</a></li>
+    </ul>
+  </nav>
+</header>
+<aside class="hc-tools" aria-label="Tools Palette">
+  <ul>
+    <li><button class="tool selected" data-tool="browse" title="Browse">Browse</button></li>
+    <li><button class="tool" data-tool="button" title="Button">Button</button></li>
+    <li><button class="tool" data-tool="field" title="Field">Field</button></li>
+    <li><button class="tool" data-tool="paint" title="Paint">Paint</button></li>
+    <li><button class="tool" data-tool="hand" title="Hand">Hand</button></li>
+  </ul>
+</aside>
+<main class="hc-main" role="main">
+<div class="hc-window">
+<div class="hc-titlebar">
+  <span class="title">Printing & Reports</span>
+  <div class="window-controls" aria-hidden="true">
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+</div>
+<section class="hc-content">
+
+<section class="panel">
+  <h3>Printing & Reports</h3>
+  <div class="hc-grid">
+    <div class="hc-col">
+      <label class="hc-label">open printing [with dialog]</label>
+      <button class="hc-button">Open Printing</button>
+      <button class="hc-button">Close Printing</button>
+      <div class="hc-row">
+        <button class="hc-button">print card</button>
+        <button class="hc-button">print cards 1 to 5</button>
+        <button class="hc-button">print marked cards</button>
+      </div>
+    </div>
+    <div class="hc-col">
+      <label class="hc-label">Report Templates</label>
+      <select class="hc-field">
+        <option>Default Report</option>
+      </select>
+      <div class="hc-row">
+        <button class="hc-button">open report printing</button>
+        <button class="hc-button">close printing</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+</div>
+</main>
+
+<footer class="hc-message-box" aria-label="Message Box" hidden>
+  <form class="mb-form" onsubmit="return false">
+    <label for="mb-input">Message:</label>
+    <input id="mb-input" name="message" type="text" placeholder="type HyperTalk here and press ⏎">
+    <output id="mb-output" for="mb-input" aria-live="polite"></output>
+  </form>
+</footer>
+</body>
+</html>
