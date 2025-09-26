@@ -10,72 +10,101 @@
 <body class="home-screen">
   <main class="home-window" role="main" aria-labelledby="home-title">
     <header class="home-window__header">
-      <div>
+      <div class="home-window__header-main">
+        <p class="home-window__eyebrow">HyperCard UI Kit</p>
         <h1 id="home-title">Welcome to HyperCard</h1>
-        <p class="home-window__status" role="status">Color Tools are <strong>ON</strong></p>
+        <p class="home-window__tagline">
+          Explore lovingly recreated stacks, editors, and tools built for prototyping your own HyperCard-inspired experiences.
+        </p>
+        <div class="home-window__actions">
+          <a class="home-action home-action--primary" href="card-view.html">Launch Stack Kit</a>
+          <a class="home-action" href="script-editor.html">Open Script Editor</a>
+        </div>
       </div>
-      <p class="home-window__home" aria-label="Current stack">Home</p>
+      <aside class="home-window__status-card" aria-live="polite">
+        <p class="home-window__status-label">Color Tools</p>
+        <p class="home-window__status-state">ON</p>
+        <p class="home-window__home">Current stack <span>Home</span></p>
+      </aside>
     </header>
 
     <section class="home-window__intro">
       <p>
-        Choose a stack to explore HyperCard features, learn HyperTalk, or discover the latest tools. Each stack opens in a new
-        window of this UI kit so you can wire in your own runtime.
+        Choose a stack to learn HyperTalk, inspect visual styles, or reference the newest palettes. Each launch opens a dedicated
+        window so you can plug the UI kit into your own runtime while keeping this dashboard handy.
       </p>
+      <ul class="home-window__highlights">
+        <li>Preview UI building blocks and documentation side by side.</li>
+        <li>Jump directly into editors, palettes, and diagnostic tools.</li>
+        <li>Share curated stacks with teammates using a single launcher.</li>
+      </ul>
     </section>
 
     <section class="home-window__grid" aria-label="Stacks and tools">
       <a class="home-item" href="card-view.html">
         <span class="home-icon home-icon--tour" aria-hidden="true"></span>
-        <span class="home-item__label">HyperCard Tour</span>
+        <span class="home-item__label" role="heading" aria-level="2">HyperCard Tour</span>
+        <span class="home-item__summary">Start here to see card navigation, backgrounds, and field styling in context.</span>
       </a>
       <a class="home-item" href="script-editor.html">
         <span class="home-icon home-icon--help" aria-hidden="true"></span>
-        <span class="home-item__label">HyperCard Help</span>
+        <span class="home-item__label" role="heading" aria-level="2">HyperCard Help</span>
+        <span class="home-item__summary">Browse HyperTalk references, command guides, and syntax spotlights.</span>
       </a>
       <a class="home-item" href="message-box.html">
         <span class="home-icon home-icon--practice" aria-hidden="true"></span>
-        <span class="home-item__label">Practice</span>
+        <span class="home-item__label" role="heading" aria-level="2">Practice</span>
+        <span class="home-item__summary">Test handlers, run quick scripts, and see output in the Message Box.</span>
       </a>
       <a class="home-item" href="background-editor.html">
         <span class="home-icon home-icon--features" aria-hidden="true"></span>
-        <span class="home-item__label">New Features</span>
+        <span class="home-item__label" role="heading" aria-level="2">New Features</span>
+        <span class="home-item__summary">Check out the latest UI components, cards, and paint tools ready to wire up.</span>
       </a>
       <a class="home-item" href="sound-paint.html">
         <span class="home-icon home-icon--art" aria-hidden="true"></span>
-        <span class="home-item__label">Art Bits</span>
+        <span class="home-item__label" role="heading" aria-level="2">Art Bits</span>
+        <span class="home-item__summary">Experiment with sound, paint, and visual effects straight from the toolbox.</span>
       </a>
       <a class="home-item" href="inspectors.html">
         <span class="home-icon home-icon--addresses" aria-hidden="true"></span>
-        <span class="home-item__label">Addresses</span>
+        <span class="home-item__label" role="heading" aria-level="2">Addresses</span>
+        <span class="home-item__summary">Dig into object properties with inspectors for cards, backgrounds, and more.</span>
       </a>
       <a class="home-item" href="dialogs.html">
         <span class="home-icon home-icon--dialer" aria-hidden="true"></span>
-        <span class="home-item__label">Phone Dialer</span>
+        <span class="home-item__label" role="heading" aria-level="2">Phone Dialer</span>
+        <span class="home-item__summary">Review alert, confirmation, and prompt patterns ready for integration.</span>
       </a>
       <a class="home-item" href="find-mark.html">
         <span class="home-icon home-icon--graph" aria-hidden="true"></span>
-        <span class="home-item__label">Graph Maker</span>
+        <span class="home-item__label" role="heading" aria-level="2">Graph Maker</span>
+        <span class="home-item__summary">See charting widgets and data-aware UI utilities in action.</span>
       </a>
       <a class="home-item" href="apple-events.html">
         <span class="home-icon home-icon--qt" aria-hidden="true"></span>
-        <span class="home-item__label">QuickTime Tools</span>
+        <span class="home-item__label" role="heading" aria-level="2">QuickTime Tools</span>
+        <span class="home-item__summary">Browse sample stacks that showcase Apple events and media integrations.</span>
       </a>
       <a class="home-item" href="printing.html">
         <span class="home-icon home-icon--mail" aria-hidden="true"></span>
-        <span class="home-item__label">AppleScript Mail Merge</span>
+        <span class="home-item__label" role="heading" aria-level="2">AppleScript Mail Merge</span>
+        <span class="home-item__summary">Walk through scripted mail merges and printing workflows.</span>
       </a>
       <a class="home-item" href="preferences.html">
         <span class="home-icon home-icon--text" aria-hidden="true"></span>
-        <span class="home-item__label">AppleScript Text Controls</span>
+        <span class="home-item__label" role="heading" aria-level="2">AppleScript Text Controls</span>
+        <span class="home-item__summary">Inspect text field attributes, rulers, and scriptable typography options.</span>
       </a>
       <a class="home-item" href="window-management.html">
         <span class="home-icon home-icon--extras" aria-hidden="true"></span>
-        <span class="home-item__label">Stack Manager</span>
+        <span class="home-item__label" role="heading" aria-level="2">Stack Manager</span>
+        <span class="home-item__summary">Preview window management helpers for multi-stack projects.</span>
       </a>
     </section>
 
     <nav class="home-tabs" aria-label="Home navigation">
+      <span class="home-tabs__label" aria-hidden="true">Browse cards</span>
       <button type="button" class="home-tab home-tab--active">Welcome to…</button>
       <a class="home-tab" href="card-view.html">Stack Kit</a>
       <button type="button" class="home-tab" data-nav="next">Card 3</button>
