@@ -40,21 +40,21 @@
   <h3>Preferences</h3>
   <div class="hc-grid">
     <div class="hc-col">
-      <label class="hc-label">User Level</label>
-      <select class="hc-field">
-        <option>1 — Browsing</option>
-        <option>2 — Typing</option>
-        <option>3 — Painting</option>
-        <option>4 — Authoring</option>
-        <option selected>5 — Scripting</option>
+      <label class="hc-label" for="pref-user-level">User Level</label>
+      <select id="pref-user-level" class="hc-field" data-pref="user-level">
+        <option value="1">1 — Browsing</option>
+        <option value="2">2 — Typing</option>
+        <option value="3">3 — Painting</option>
+        <option value="4">4 — Authoring</option>
+        <option value="5">5 — Scripting</option>
       </select>
       <small class="meta">Set <code class="k">userLevel</code> (1–5) in your runtime.</small>
     </div>
     <div class="hc-col">
-      <label class="hc-label">Script Editor Font</label>
-      <input class="hc-field" placeholder="scriptTextFont (e.g., Monaco)">
-      <label class="hc-label">Script Editor Size</label>
-      <input class="hc-field" placeholder="scriptTextSize (e.g., 9)">
+      <label class="hc-label" for="pref-script-font">Script Editor Font</label>
+      <input id="pref-script-font" class="hc-field" data-pref="script-font" placeholder="scriptTextFont (e.g., Monaco)">
+      <label class="hc-label" for="pref-script-size">Script Editor Size</label>
+      <input id="pref-script-size" class="hc-field" data-pref="script-size" placeholder="scriptTextSize (e.g., 9)" inputmode="numeric">
     </div>
   </div>
 </section>
